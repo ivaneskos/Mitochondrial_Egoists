@@ -1,0 +1,18 @@
+setwd("/home/yana/Desktop/Vanyata/PAML_tree_all/Wilcox_test")
+COX1 <- read.csv ("COX1.csv", header = TRUE)
+COX2 <- read.csv ("COX2.csv", header = TRUE)
+COX3 <- read.csv ("COX3.csv", header = TRUE)
+LAGLIDADG_1 <- read.csv ("LAGLIDADG_1.csv", header = TRUE)
+LAGLIDADG_2 <- read.csv ("LAGLIDADG_2.csv", header = TRUE)
+
+wilcox.test(as.numeric(unlist(COX1)), as.numeric(unlist(COX2)), paired = FALSE)
+wilcox.test(as.numeric(unlist(COX1)), as.numeric(unlist(COX3)), paired = FALSE)
+wilcox.test(as.numeric(unlist(COX1)), as.numeric(unlist(LAGLIDADG_1)), paired = FALSE)
+wilcox.test(as.numeric(unlist(COX1)), as.numeric(unlist(LAGLIDADG_2)), paired = FALSE)
+wilcox.test(as.numeric(unlist(COX2)), as.numeric(unlist(COX3)), paired = FALSE)
+wilcox.test(as.numeric(unlist(COX2)), as.numeric(unlist(LAGLIDADG_1)), paired = FALSE)
+wilcox.test(as.numeric(unlist(COX2)), as.numeric(unlist(LAGLIDADG_2)), paired = FALSE)
+wilcox.test(as.numeric(unlist(COX3)), as.numeric(unlist(LAGLIDADG_1)), paired = FALSE)
+wilcox.test(as.numeric(unlist(COX3)), as.numeric(unlist(LAGLIDADG_2)), paired = FALSE)
+wilcox.test(as.numeric(unlist(LAGLIDADG_1)), as.numeric(unlist(LAGLIDADG_2)), paired = FALSE)
+
